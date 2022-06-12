@@ -8,6 +8,9 @@ namespace DynamicForm.Entities
     {
         public int Id { get; set; }
         public int FormId { get; set; }
+        public Form Form { get; set; }
         public DateTime FillDate { get; set; }
+
+        public virtual ICollection<FilledFormField> FilledFormFields { get; set; }
     }
 }
